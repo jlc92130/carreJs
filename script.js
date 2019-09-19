@@ -30,34 +30,31 @@
 var move = 30;
 document.addEventListener("keydown", function(event) {
 
-  switch (event.keyCode) {
+  switch (event.which) {
     case 37:            //go left
 
      if (document.getElementById("board2").offsetLeft + move < 500) {
-       board2.style.left = (board2.offsetLeft - move) + 'px';
-     }
-  }
-  switch (event.keyCode) {
+       board2.style.left = (board2.offsetLeft - move) + 'px';}
+        break;
+
     case 39:            //go right
 
      if (document.getElementById("board2").offsetLeft + move < 500) {
-       board2.style.left = (board2.offsetLeft + move) + 'px';
-     }
-  }
-  switch (event.keyCode) {
+       board2.style.left = (board2.offsetLeft + move) + 'px';}
+        break;
+
     case 38:            //go up
 
      if (document.getElementById("board2").offsetTop + move < 500) {
-       board2.style.top = (board2.offsetTop - move) + 'px';
-     }
-  }
-  switch (event.keyCode) {
+       board2.style.top = (board2.offsetTop - move) + 'px';}
+       break;
+
     case 40:            //go down
 
      if (document.getElementById("board2").offsetTop + move < 500) {
        board2.style.top = (board2.offsetTop + move) + 'px';
-     }
-  }
-
-
-  });
+       break;
+     };
+     default: alert("vous devez revenir en arriere");
+     break;
+  }});
